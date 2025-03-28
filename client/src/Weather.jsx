@@ -52,7 +52,23 @@ const Weather = () => {
         );
         setWeather(Response.data);
       },
-      (error) => console.log(error),
+      (error) => {
+        console.error("Geolocation error:", error);
+        
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            alert("Permission denied. Please allow location access in browser settings.");
+            break;
+          case error.POSITION_UNAVAILABLE:
+            alert("Location unavailable. Try again later.");
+            break;
+          case error.TIMEOUT:
+            alert("Location request timed out. Please check your internet connection.");
+            break;
+          default:
+            alert("An unknown error occurred while fetching location.");
+        }
+      },
       { enableHighAccuracy: false, timeout: 5000 }
     );
   }, []);
