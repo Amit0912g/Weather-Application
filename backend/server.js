@@ -5,7 +5,7 @@ const cors=require("cors")
 require("dotenv").config()
   
 const corsOption={
-    origin:"https://weather-app-livid-two-79.vercel.app/",
+    origin:"https://weather-application99.vercel.app/",
     credentials:true
 }
 
