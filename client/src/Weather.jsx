@@ -52,7 +52,8 @@ const Weather = () => {
         );
         setWeather(Response.data);
       },
-      (error) => console.log(error)
+      (error) => console.log(error),
+      { enableHighAccuracy: false, timeout: 5000 }
     );
   }, []);
 
