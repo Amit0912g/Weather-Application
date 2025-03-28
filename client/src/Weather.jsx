@@ -39,6 +39,11 @@ const Weather = () => {
   useEffect(() => {
     if (isFetched.current) return;
     isFetched.current = true;
+
+    if (!navigator.geolocation) {
+      console.error("Geolocation is not supported by this browser.");
+      return;
+    }
     navigator.geolocation.getCurrentPosition(
       async (Position) => {
         const { latitude, longitude } = Position.coords;
