@@ -97,21 +97,21 @@ const Weather = () => {
       {weather && (
         <div className="text-center text-black lg:shadow-xl lg:rounded-lg lg:mt-[12%] lg:p-5 bg-white/30 backdrop-blur-md sm:mt-5 sm:w-[50%] sm:h-[20%] sm:px-[10%] sm:py-[7%] md:px-[5%] md:py-[2%] lg:w-[35%] lg:h-[45%] ">
           <div className="flex items-center justify-center gap-3 sm:mt-4 md:mt-2">
-            <h1 className="font-bold lg:text-xl sm:text-7xl md:text-3xl xl:text-xl">
+            <h1 className="font-bold lg:text-xl sm:text-7xl md:text-3xl xl:text-2xl">
               {weather.name}
             </h1>
-            <h2 className="font-bold lg:text-2xl sm:text-8xl md:text-4xl xl:text-2xl">
+            <h2 className="font-bold lg:text-2xl sm:text-8xl md:text-4xl xl:text-3xl">
               {weather.sys.country}
             </h2>
           </div>
           
-          <h2 className="sm:mt-6 md:text-2xl lg:text-xl sm:text-8xl xl:text-xl">
+          <h2 className="sm:mt-6 md:text-2xl lg:text-xl sm:text-8xl xl:text-2xl">
             {weather.weather[0].description}
           </h2>
-          <p className="sm:mt-6 md:text-2xl lg:text-lg sm:text-8xl xl:text-xl">
+          <p className="sm:mt-6 md:text-2xl lg:text-lg sm:text-8xl xl:text-2xl">
             🌡 {Math.floor(weather.main.temp)}°C
           </p>
-          <p className="sm:mt-6 md:text-2xl sm:text-7xl lg:text-lg xl:text-xl">
+          <p className="sm:mt-6 md:text-2xl sm:text-7xl lg:text-lg xl:text-2xl">
             🌬 {weather.wind.speed} m/s
           </p>
         </div>
