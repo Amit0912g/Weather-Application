@@ -43,7 +43,7 @@ const Weather = () => {
       async (Position) => {
         const { latitude, longitude } = Position.coords;
         const Response = await axios.get(
-          `http://localhost:7000/api/v1/weather/location?latitude=${latitude}&longitude=${longitude}`
+          `https://weather-application-six-roan.vercel.app/api/v1/weather/location?latitude=${latitude}&longitude=${longitude}`
         );
         setWeather(Response.data);
       },
@@ -54,7 +54,7 @@ const Weather = () => {
   const fetchWeatherByCity = async () => {
     if (!city) return;
     const response = await axios.get(
-      `http://localhost:7000/api/v1/weather/city?city=${city}`
+      `https://weather-application-six-roan.vercel.app/api/v1/weather/city?city=${city}`
     );
     setWeather(response.data);
 
