@@ -5,11 +5,11 @@ const cors=require("cors")
 require("dotenv").config()
   
 const corsOption={
-    origin:"https://weather-application99.vercel.app/",
+    origin:"https://weather-app-livid-two-79.vercel.app",
     credentials:true
 }
 
-const PORT=  process.env.PORT || 7000
+const PORT=  7000
 app.use(cors(corsOption))
 app.use(express.json())
 
