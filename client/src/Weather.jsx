@@ -80,7 +80,7 @@ const Weather = () => {
         transition: "background-image 0.5s ease-in-out",
       }}
     >
-      <div className="flex items-center lg:px-4 lg:py-3 text-black lg:rounded-lg lg:shadow-xl bg-white/30 backdrop-blur-md sm:h-[6%] sm:w-[50%] sm:text-3xl sm:rounded-xl sm:shadow-2xl  sm:justify-between sm:px-4 sm:top-[30%] sm:absolute lg:top-[25%] lg:w-[35%]">
+      <div className="flex items-center lg:px-4 lg:py-3 text-black lg:rounded-lg lg:shadow-xl bg-white/30 backdrop-blur-md sm:h-[6%] sm:w-[50%] sm:text-5xl sm:rounded-xl sm:shadow-2xl  sm:justify-between sm:px-4 sm:top-[30%] sm:absolute lg:top-[25%] lg:w-[35%] md:text-3xl lg:text-2xl xl:text-xl">
         <input
           type="text"
           className="text-black bg-transparent outline-none sm:py-1 sm:px-2 placeholder-black/50 lg:py-3 lg:px-5"
@@ -97,21 +97,21 @@ const Weather = () => {
       {weather && (
         <div className="text-center text-black lg:shadow-xl lg:rounded-lg lg:mt-[12%] lg:p-5 bg-white/30 backdrop-blur-md sm:mt-5 sm:w-[50%] sm:h-[20%] sm:px-[10%] sm:py-[7%] md:px-[5%] md:py-[2%] lg:w-[35%] lg:h-[45%] ">
           <div className="flex items-center justify-center gap-3 sm:mt-4 md:mt-2">
-            <h1 className="font-bold lg:text-xl sm:text-5xl md:text-3xl">
+            <h1 className="font-bold lg:text-xl sm:text-7xl md:text-3xl xl:text-xl">
               {weather.name}
             </h1>
-            <h2 className="font-bold lg:text-2xl sm:text-6xl md:text-4xl ">
+            <h2 className="font-bold lg:text-2xl sm:text-8xl md:text-4xl xl:text-2xl">
               {weather.sys.country}
             </h2>
           </div>
           
-          <h2 className="sm:mt-6 md:text-2xl lg:text-xl sm:text-6xl">
+          <h2 className="sm:mt-6 md:text-2xl lg:text-xl sm:text-8xl xl:text-xl">
             {weather.weather[0].description}
           </h2>
-          <p className="sm:mt-6 md:text-2xl lg:text-lg sm:text-6xl">
+          <p className="sm:mt-6 md:text-2xl lg:text-lg sm:text-8xl xl:text-xl">
             🌡 {Math.floor(weather.main.temp)}°C
           </p>
-          <p className="sm:mt-6 md:text-2xl sm:text-5xl lg:text-lg">
+          <p className="sm:mt-6 md:text-2xl sm:text-7xl lg:text-lg xl:text-xl">
             🌬 {weather.wind.speed} m/s
           </p>
         </div>
